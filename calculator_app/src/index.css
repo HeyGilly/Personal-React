@@ -17,6 +17,7 @@ body{
     justify-content: center;
     min-height: 100vh;
     align-items: center;
+    padding: 10px;
 }
 
 .calculator{
@@ -60,7 +61,8 @@ button:hover{
     display: flex;
 }
 .operators button{
-    flex: 1 25%;
+    flex: 1 1 20%;
+    max-width: 20%;
     background-color: var(--secondary);
     font-weight: 700;
 }
