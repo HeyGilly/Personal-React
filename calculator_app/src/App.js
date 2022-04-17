@@ -14,8 +14,6 @@ function App() {
         }
         return digits;
     }
-
-
   return (
     <div className="App">
 
@@ -24,7 +22,7 @@ function App() {
             <section className={"display"}>
               <span>(0)</span> 0
             </section>
-            {/*Buttons*/}
+            {/*---Buttons---*/}
             <section className={"operators"}>
                 <button>/</button>
                 <button>*</button>
