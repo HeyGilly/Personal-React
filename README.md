@@ -1,8 +1,18 @@
-# Personal React Projects
+<h1 align="center">Personal React Projects</h1>
 
-This is going to be my personal playground where I play with React js. 
+<h4 align="center">My personal playground with React js.</h4>
+
+
+## Key Features
+
+* Calculator App
+    - Instantly see what your Markdown documents look like in HTML as you create them.
+* Random Practice
+    - Checkbox
+    - Github User
+    - useEffect
 
 
 
-### Applications:
-- [ ]  Calculator App
+
+    
