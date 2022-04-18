@@ -3,3 +3,15 @@
 body{
   background-color: #0D698B;
 }
+
+.container{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+}
+section{
+  font-size: 24px;
+}

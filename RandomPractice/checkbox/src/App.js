@@ -1,10 +1,15 @@
+import {useReducer} from "react";
 
-function App() {
+function CheckedBox() {
+  const [checked, toggle] = useReducer( checked => !checked, false);
   return (
-    <div className="App">
-
-    </div>
+      <>
+        <section className={'container'}>
+          <input className={"box"} type={"checkbox"} value={checked} onChange={toggle} />
+            &nbsp;
+          { checked ? "Checked" : " Not Checked"}
+        </section>
+      </>
   );
 }
-
-export default App;
+export default CheckedBox;
