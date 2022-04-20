@@ -62,7 +62,7 @@ function App() {
              ) : (
                  <div className={"welcomePage"}>
                      <h1>Welcome to Weather App</h1>
-                     <small>Search for any city and press Enter</small>
+                     <p className={'welcomeSmall'}>Search for any city and press Enter</p>
                  </div>
              )}
          </main>
