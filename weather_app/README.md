@@ -62,3 +62,4 @@ Creating a Weather Application that will take in an input and will showcase the 
 * [Gradient Backgrounds](https://cssgradient.io/gradient-backgrounds/)
 * [Box Shadows](https://getcssscan.com/css-box-shadow-examples)
 * [Google Fonts](https://fonts.google.com/?vfonly=true)
+* [A Quick Guide to using images in React Applications](https://unclebigbay.com/react-images)
