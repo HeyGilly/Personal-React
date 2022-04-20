@@ -84,3 +84,18 @@ main{
 img{
     width: 150px;
 }
+
+/*Welcome Page*/
+h1{
+    padding-top: 40px;
+    text-shadow: 3px 6px rgba(50,50,70,0.5);
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+}
+.welcomeSmall{
+    padding-top: 15px;
+    padding-left: 5px;
+    font-size: 15px;
+    color: white;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
