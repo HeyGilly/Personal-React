@@ -58,6 +58,7 @@ Creating a Weather Application that will take in an input and will showcase the 
 ## Acknowledgments
 * [Youtube](https://youtube.com)
 * [React- Get Started](https://reactjs.org/docs/getting-started.html)
+* [OpenWeather](https://openweathermap.org/)
 * [CodeSource - format dates in ReactJS](https://codesource.io/how-to-format-dates-in-reactjs/)
 * [Gradient Backgrounds](https://cssgradient.io/gradient-backgrounds/)
 * [Box Shadows](https://getcssscan.com/css-box-shadow-examples)
