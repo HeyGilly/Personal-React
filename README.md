@@ -6,7 +6,7 @@
 ## Key Features
 
 * Calculator App
-    - Instantly see what your Markdown documents look like in HTML as you create them.
+* Weather App
 * Random Practice
     - Checkbox
     - Github User
