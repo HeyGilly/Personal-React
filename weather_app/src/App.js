@@ -13,7 +13,7 @@ function App() {
                  <input
                      type={"Text"}
                      className={"searchBar"}
-                     placeholder={"Search Here..."}
+                     placeholder={"City..."}
                  />
              </section>
          </main>
