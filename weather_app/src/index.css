@@ -1,3 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 * {margin: 0;padding: 0;box-sizing: border-box;font-family: 'Readex Pro', sans-serif;}
 
+body{
+    background:linear-gradient(120deg, #20a2ff, #adc9e7);
+    height: 100vh;
+}
+/*Search Bar*/
+nav{padding: 0 25px;}
+.searchBar{
+    /*remove default style*/
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+    /*style*/
+    width: 100%;
+    background-color: #FFFFFF40;
+    color: #313131;;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0 4px 12px;
+    transition: 0.4s ease;
+}
+/*searchbar clicked on*/
+.searchBar:focus{
+    background-color: #FFFFFFBF;
+    font-size: 23px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+    padding-top: 20px;
+}
