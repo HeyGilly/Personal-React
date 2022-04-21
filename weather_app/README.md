@@ -44,4 +44,5 @@ To run this project, you will need to add the following environment variables to
 - [Google Fonts](https://fonts.google.com/)
 - [You Probably Don't Need Moment.js Anymore](https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore)
 - [import or use images in ReactJS](https://www.tutorialswebsite.com/how-to-import-or-use-images-in-reactjs/)
+- [CSS Background Gradient](https://www.makeuseof.com/css-background-gradients/)
 
