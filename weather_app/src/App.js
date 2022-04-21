@@ -31,7 +31,7 @@ function App() {
             />
         </nav>
         {/*Time, location, date display*/}
-        <header className="searchContainer">
+        <header className="timeDateContainer">
           <p className={'time'}>{timeDisplay}</p>                    {/* Time display*/}
           <p className={'location'}>{"Los Angeles, US"}</p>          {/* location    */}
           <p className={'date'}>{dateDisplay}</p>                    {/* Date - day month year*/}
