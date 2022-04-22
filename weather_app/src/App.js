@@ -45,7 +45,7 @@ function App() {
         </main>
         {/*Weather Icons*/}
         <div className={'iconContainer'}>
-            <img src={icons} alt="Weather Icons" width={200}/>
+            <img src={icons} alt="Weather Icons" className={'icons'} />
         </div>
 
     </div>
