@@ -69,11 +69,13 @@ main{
     font-size: 82px;
     text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
     box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
 }
 .describeWeather{
     padding-top: 24px;
     font-size: 24px;
     text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+    font-weight: 600;
 }
 .iconContainer{
     display: flex;
