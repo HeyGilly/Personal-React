@@ -4,6 +4,7 @@
 body{
     background:linear-gradient(120deg, #20a2ff, #adc9e7);
     height: 100vh;
+
 }
 /*Search Bar*/
 nav{padding: 0 25px;height: 75px}
@@ -53,4 +54,10 @@ nav{padding: 0 25px;height: 75px}
     font-weight: 500;
     text-shadow: 3px 3px #3232467F;
     letter-spacing: 1px;
+}
+/*Temp and Description Container*/
+main{
+    text-align: center;
+
+
 }
