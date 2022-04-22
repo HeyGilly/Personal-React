@@ -31,12 +31,12 @@ To run this project, you will need to add the following environment variables to
 - index.css, center and style the setup
   - [X] Background
   - [X] Input
-  - [ ] Time
-  - [ ] Date
-  - [ ] Location
-  - [ ] Temp
-  - [ ] Description
-  - [ ] Icon
+  - [X] Time
+  - [X] Date
+  - [X] Location
+  - [X] Temp
+  - [X] Description
+  - [X] Icon
 
 ## Acknowledgements
 
