@@ -8,6 +8,12 @@ function App() {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
 
+    const search = evt => {
+        if (evt.key === "Enter") {
+            // fetch the information
+        }
+    }
+
     // Date - present day 00 month year
     const dateDisplay = new Date().toLocaleDateString(
         'en-gb',
