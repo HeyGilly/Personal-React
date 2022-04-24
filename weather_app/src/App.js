@@ -1,6 +1,11 @@
 import icons from '../src/Assets/sun.png'
 function App() {
 
+    // UseState
+    //a Hook that allows you to have state variables in functional components.
+    const [query, setQuery] = useState('');
+    const [weather, setWeather] = useState({});
+
     // Date - present day 00 month year
     const dateDisplay = new Date().toLocaleDateString(
         'en-gb',
