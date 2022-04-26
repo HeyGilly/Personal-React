@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 
 function App() {
 
+    //It is free anyone can get one, that is why it is not hidden.
+    const REACT_APP_API_KEY= "c6734099ed5daa0f854247202a5a8f59";
     const weather_API_call = "https://api.openweathermap.org/data/2.5/";
 
 
@@ -13,7 +15,8 @@ function App() {
 
     const search = evt => {
         if (evt.key === "Enter") {
-            fetch(`${weather_API_call}weather?q=${searchedCityName}&appid=${process.env.REACT_APP_API_KEY}`)
+            // console.log(REACT_APP_API_KEY)
+            fetch(`${weather_API_call}weather?q=${searchedCityName}&appid=${REACT_APP_API_KEY}`)
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);     // passed through another promise and this is going to be saved under variable name weather.
