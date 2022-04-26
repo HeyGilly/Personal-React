@@ -52,7 +52,12 @@ To run this project, you will need to add the following environment variables to
   - [X] Change location to weather.main
   - [X] Change temperature and make sure its rounded the nearest whole number. 
   - [X] use the formula to turn it from kelvin to Fahrenheit
-  - [ ] Creating a constant variable/ function that will check to see the icon and then display the correct icon. 
+  - [X] Creating a constant variable/ function that will check to see the icon and then display the correct icon. 
+- Evening Background - index.css
+  - [ ] create a new class for evening
+  - [ ] create a function that display the time in 24 hour
+  - [ ] get that time and make an if statement to see if it's greater than 18(6pm) the class will change. 
+  - [ ] style the evening class that will change the background and welcome colors. 
 
 ## Acknowledgements
 
