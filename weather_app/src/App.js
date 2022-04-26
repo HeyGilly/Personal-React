@@ -5,7 +5,6 @@ import iconSnow from './Assets/snow.png'
 import iconThunder from './Assets/thunderstorm.png'
 import iconTornado from './Assets/tornado.png'
 import React, { useState } from 'react';
-
 function App() {
 
     //It is free anyone can get one, that is why it is not hidden.
@@ -21,6 +20,7 @@ function App() {
     const search = evt => {
         if (evt.key === "Enter") {
             // console.log(REACT_APP_API_KEY)
+            console.log(hourDisplay)
             fetch(`${weather_API_call}weather?q=${searchedCityName}&appid=${REACT_APP_API_KEY}&lang={"en"}`)
                 .then(res => res.json())
                 .then(result => {
@@ -50,9 +50,21 @@ function App() {
             hour12: true }
     ).format(new Date());
 
+    // Current hour in 24 horus
+    const hourDisplay = Intl.DateTimeFormat(
+        'en',
+        {
+            hour: "numeric",
+            hour12: false }
+    ).format(new Date());
+
+
+
+
+
 
   return (
-    <div className="App">
+      <div className={(hourDisplay >= 18) ? 'App Evening' : 'App'}>
         {/*Search Bar*/}
         <nav>
             <input
@@ -84,25 +96,27 @@ function App() {
                 {/*Weather Icons*/}
                 <div className={'iconContainer'}>
                     <img src={
-                            (weather.weather[0].main === "Clouds") ? (iconCloud):
+                        (weather.weather[0].main === "Clouds") ? (iconCloud):
                             (weather.weather[0].main === "Sunny") ? (icons):
-                            (weather.weather[0].main === "Clear") ? (icons):
-                            (weather.weather[0].main === "ThunderStorm") ? (iconThunder):
-                            (weather.weather[0].main === "Drizzle") ? (iconRain):
-                            (weather.weather[0].main === "Rain") ? (iconRain):
-                            (weather.weather[0].main === "Snow") ? (iconSnow):
-                            (weather.weather[0].main === "Tornado") ? (iconTornado):('')
+                                (weather.weather[0].main === "Clear") ? (icons):
+                                    (weather.weather[0].main === "ThunderStorm") ? (iconThunder):
+                                        (weather.weather[0].main === "Drizzle") ? (iconRain):
+                                            (weather.weather[0].main === "Rain") ? (iconRain):
+                                                (weather.weather[0].main === "Snow") ? (iconSnow):
+                                                    (weather.weather[0].main === "Tornado") ? (iconTornado):('')
                     } alt="Weather Icons" className={'icons'} />
                 </div>
-
             </div>
+
         ) : (
+
             <div>
                 {/*Time, location, date display*/}
                 <header className="welcomePage">
-                    <p className={'time'}>{timeDisplay}</p>                    {/* Time display*/}
-                    <p>Welcome to the Weather App</p>
-                    <p>Search for any city and press enter. </p>
+                    <p className={'welcomeTime'}>{timeDisplay}</p>                    {/* Time display*/}
+                    <h1 className={'welcome'}>Welcome to the Weather App</h1>
+                    <hr />
+                    <p className={'smallText'}>Search for any city and press enter. </p>
                 </header>
             </div>
         )}
@@ -110,5 +124,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
