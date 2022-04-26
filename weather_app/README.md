@@ -1,5 +1,5 @@
 
-## Weather Application
+# Weather Application
 ![App Screenshot](src/Assets/weatherAppIMG.png "Weather App IMG")
 
 ## Environment Variables
