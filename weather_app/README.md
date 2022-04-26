@@ -54,10 +54,10 @@ To run this project, you will need to add the following environment variables to
   - [X] use the formula to turn it from kelvin to Fahrenheit
   - [X] Creating a constant variable/ function that will check to see the icon and then display the correct icon. 
 - Evening Background - index.css
-  - [ ] create a new class for evening
-  - [ ] create a function that display the time in 24 hour
-  - [ ] get that time and make an if statement to see if it's greater than 18(6pm) the class will change. 
-  - [ ] style the evening class that will change the background and welcome colors. 
+  - [X] create a new class for evening
+  - [X] create a function that display the time in 24 hour
+  - [X] get that time and make an if statement to see if it's greater than 18(6pm) the class will change. 
+  - [X] style the evening class that will change the background and welcome colors. 
 
 ## Acknowledgements
 
