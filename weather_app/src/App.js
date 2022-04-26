@@ -16,7 +16,7 @@ function App() {
     const search = evt => {
         if (evt.key === "Enter") {
             // console.log(REACT_APP_API_KEY)
-            fetch(`${weather_API_call}weather?q=${searchedCityName}&appid=${REACT_APP_API_KEY}`)
+            fetch(`${weather_API_call}weather?q=${searchedCityName}&appid=${REACT_APP_API_KEY}&lang={"en"}`)
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);     // passed through another promise and this is going to be saved under variable name weather.
@@ -25,6 +25,8 @@ function App() {
                 });
         }
     }
+
+
 
     // Date - present day 00 month year
     const dateDisplay = new Date().toLocaleDateString(
@@ -58,23 +60,39 @@ function App() {
             onKeyPress={search} // run the function on key press, enter
             />
         </nav>
-        {/*Time, location, date display*/}
-        <header className="timeDateContainer">
-          <p className={'time'}>{timeDisplay}</p>                    {/* Time display*/}
-          <p className={'location'}>{"Los Angeles, US"}</p>          {/* location    */}
-          <p className={'date'}>{dateDisplay}</p>                    {/* Date - day month year*/}
-        </header>
-        {/*Weather Display*/}
-        <main>
-            <section className={"weather-Container"}>
-                <p className={'temperatureDisplay'}>73°F</p>          {/* Temp   */}
-                <p className={'describeWeather'}>Sunny</p>          {/* Description of Weather   */}
-            </section>
-        </main>
-        {/*Weather Icons*/}
-        <div className={'iconContainer'}>
-            <img src={icons} alt="Weather Icons" className={'icons'} />
-        </div>
+        {/*If else Statement*/}
+        {(typeof weather.main != "undefined") ? (
+            <div>
+                {/*Time, location, date display*/}
+                <header className="timeDateContainer">
+                    <p className={'time'}>{timeDisplay}</p>                    {/* Time display*/}
+                    <div className="location">{weather.name}, {weather.sys.country}</div> {/* location */}
+                    <p className={'date'}>{dateDisplay}</p>                    {/* Date - day month year*/}
+                </header>
+                {/*Weather Display*/}
+                <main>
+                    <section className={"weather-Container"}>
+                        {/*Change from kelvin to Fahrenheit*/}
+                        <p className={'temperatureDisplay'}>{Math.round(((weather.main.temp - 273.15)* 1.8000) + 32.00)}°F</p>          {/* Temp   */}
+                        <p className={'describeWeather'}>{weather.weather[0].main}</p>          {/* Description of Weather   */}
+                    </section>
+                </main>
+                {/*Weather Icons*/}
+                <div className={'iconContainer'}>
+                    <img src={icons} alt="Weather Icons" className={'icons'} />
+                </div>
+
+            </div>
+        ) : (
+            <div>
+                {/*Time, location, date display*/}
+                <header className="welcomePage">
+                    <p className={'time'}>{timeDisplay}</p>                    {/* Time display*/}
+                    <p>Welcome to the Weather App</p>
+                    <p>Search for any city and press enter. </p>
+                </header>
+            </div>
+        )}
 
     </div>
   );
