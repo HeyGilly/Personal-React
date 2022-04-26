@@ -24,3 +24,4 @@ yarn-error.log*
 
 # Passing API Keys
 .env
+/Personal-React/weather_app/src/data/keysAPI.jsv
