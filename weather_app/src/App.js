@@ -20,13 +20,13 @@ function App() {
     const search = evt => {
         if (evt.key === "Enter") {
             // console.log(REACT_APP_API_KEY)
-            console.log(hourDisplay)
+            // console.log(hourDisplay)
             fetch(`${weather_API_call}weather?q=${searchedCityName}&appid=${REACT_APP_API_KEY}&lang={"en"}`)
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);     // passed through another promise and this is going to be saved under variable name weather.
                     setLocation('');     // turn the search bar into (" "), so you can put in your next location.
-                    console.log(result);    // this should show you the data of the location you searched.
+                    // console.log(result);    // this should show you the data of the location you searched.
                 });
         }
     }
