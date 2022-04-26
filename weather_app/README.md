@@ -1,22 +1,10 @@
 
-
-
-## Weather Appplication
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-
-
+## Weather Application
+![App Screenshot](src/Assets/weatherAppIMG.png "Weather App IMG")
 
 ## Environment Variables
-
 To run this project, you will need to add the following environment variables to your file
-
 `Weather_API_KEY`
-
-
-
 
 ## Roadmap
 - Delete Unnecessary code / files to start the Initial Start
