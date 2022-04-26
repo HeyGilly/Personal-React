@@ -1,4 +1,9 @@
-import icons from '../src/Assets/sun.png'
+import icons from './Assets/sun.png';
+import iconCloud from './Assets/cloudy.png'
+import iconRain from './Assets/rain.png'
+import iconSnow from './Assets/snow.png'
+import iconThunder from './Assets/thunderstorm.png'
+import iconTornado from './Assets/tornado.png'
 import React, { useState } from 'react';
 
 function App() {
@@ -25,7 +30,6 @@ function App() {
                 });
         }
     }
-
 
 
     // Date - present day 00 month year
@@ -79,7 +83,16 @@ function App() {
                 </main>
                 {/*Weather Icons*/}
                 <div className={'iconContainer'}>
-                    <img src={icons} alt="Weather Icons" className={'icons'} />
+                    <img src={
+                            (weather.weather[0].main === "Clouds") ? (iconCloud):
+                            (weather.weather[0].main === "Sunny") ? (icons):
+                            (weather.weather[0].main === "Clear") ? (icons):
+                            (weather.weather[0].main === "ThunderStorm") ? (iconThunder):
+                            (weather.weather[0].main === "Drizzle") ? (iconRain):
+                            (weather.weather[0].main === "Rain") ? (iconRain):
+                            (weather.weather[0].main === "Snow") ? (iconSnow):
+                            (weather.weather[0].main === "Tornado") ? (iconTornado):('')
+                    } alt="Weather Icons" className={'icons'} />
                 </div>
 
             </div>
