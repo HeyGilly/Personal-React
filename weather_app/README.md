@@ -37,6 +37,22 @@ To run this project, you will need to add the following environment variables to
   - [X] Temp
   - [X] Description
   - [X] Icon
+- App.js
+  - [X] Inside a function, an if statement to see if you pressed enter. 
+  - [X] Inside the if statement once you press enter, fetch the url from weather API one call. 
+    - we are using one call because we are  building only for mobile and only the current weather. 
+  - [X] capture the value of input. 
+  - [X] created a hook to capture the value and set it to a variable. 
+  - [X] with API key, API call, and the hook variable searchedCityName
+    - I UNDERSTAND THE API KEY IS NOT HIDDEN, THIS IS A FREE API AND ANYONE CAN GET ONE FOR FREE. 
+- weather.main != undefined
+  - [X] Need to create an if statement because when you first open the application your weather main is undefined. without this you will keep getting an error. 
+  - [X] the else-if is going to be the home page, before the search. 
+- Change to data inputs. 
+  - [X] Change location to weather.main
+  - [X] Change temperature and make sure its rounded the nearest whole number. 
+  - [X] use the formula to turn it from kelvin to Fahrenheit
+  - [ ] Creating a constant variable/ function that will check to see the icon and then display the correct icon. 
 
 ## Acknowledgements
 
