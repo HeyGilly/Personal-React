@@ -1,6 +1,8 @@
 
 # Weather Application
+This weather application is going to show you the current weather of the city you are searching. In the input you will type in any disired city and then press enter. The data will be pulled from Open Weather API, and it's free to use. The Main Objective of this application is to understand how to fetch in React.js and how to understnad hooks.  
 ![App Screenshot](src/Assets/weatherAppIMG.png "Weather App IMG")
+
 
 ## Environment Variables
 To run this project, you will need to add the following environment variables to your file
