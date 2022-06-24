@@ -1,2 +1,0 @@
-# Practice with useEffect().
-

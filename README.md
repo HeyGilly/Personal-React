@@ -2,6 +2,8 @@
 
 <h4 align="center">My personal playground with React js.</h4>
 
+<img src="Assets/templateHeader.png" align="center" />
+
 
 ###Notes
  * React is a Javascript Framework that was created by facebook and has been open-sourced since 2013
@@ -11,17 +13,11 @@
 
 ### RoadMap
 
-* Calculator App
-* Weather App
-* Random Practice
-    - Checkbox
-    - GitHub User
-    - useEffect
+
 
 
 ### Tools
-* React Developer Tools
-  * Allowing you to now if your website is using React.js
+
 
 
     
