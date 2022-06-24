@@ -2,7 +2,7 @@
 
 <h4 align="center">My personal playground with React js.</h4>
 
-<img src="Assets/templateHeader.png" align="center" />
+<img align="center" src="Assets/templateHeader.png"/>
 
 
 ###Notes
