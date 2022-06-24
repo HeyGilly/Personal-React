@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
     <meta name="creator" content="Nicholas 'Gilly' Gilmore">
     <meta name="subject" content="React">
     <meta name="description" content=" Practice using CDN React ">
+    <!-- Boostrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <title>Internal CDN React</title>
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -15,8 +19,112 @@
         <!--  For Production:  -->
 <!--    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>-->
 <!--    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>-->
+
+    <!-- Note:
+    If you're using Babel in production, you should normally not use @babel/standalone.
+    Instead, you should use a build system running on Node.js, such as Webpack, Rollup,
+    or Parcel, to transpile your JS ahead of time.
+-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
 
+    <header id="root"></header>
+    <main id="unorderList"></main>
+    <section id="sectionJsx"></section>
+    <section id="footer"></section>
+
+
 </body>
+<!-- Boostrap 5.0 -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<!----- React.js ----->
+<script type="text/javascript">
+
+    //---------
+    // HEADER
+    // Can Create Variables
+    let heading = React.createElement(
+        "h1",  //type of element
+        // null,  //null, we are not passing properties through this element
+        { style: {color:"RoyalBlue" } }, // any properties
+        "Welcome to the PlayGround!!"    //context
+    )
+     //  Important in React & Takes Two Arguments
+    ReactDOM.render(
+        //-- 1. The Element we want to create
+        heading,
+        //-- 2. Where we want to put it.
+        document.getElementById('root')
+        );
+
+    //-----------
+
+    let unorderList = React.createElement(
+        'ul',
+        { style: {'background-color': 'limegreen' } },
+        React.createElement('li', { style: {'font-size': '34px',color:'rebeccapurple' } }, "Monday"),
+        React.createElement('li', { style: {'font-size': '34px',color:'rebeccapurple' } }, "Tuesday"),
+        React.createElement('li', { style: {'font-size': '34px',color:'rebeccapurple' } }, "Wednesday"),
+        React.createElement('li', { style: {'font-size': '34px',color:'rebeccapurple' } }, "Thursday"),
+        React.createElement('li', { style: {'font-size': '34px',color:'rebeccapurple' } }, "Friday"),
+        React.createElement('li', { style: {'font-size': '34px',color:'rebeccapurple' } }, "Saturday")
+    )
+    // UnOrder List
+    ReactDOM.render(
+        //-- 1. The Element we want to create
+        unorderList,
+        //-- 2. Where we want to put it.
+        document.getElementById('unorderList')
+    );
+
+
+
+    </script>
+<script type="text/babel">
+    /* //-----------
+     // JSX
+      This is not going to work because
+     this JSX syntax is not supported in our browser
+     We need to turn it into Babel.
+     Babeljs.io*/
+
+    let bHeart = "🖤"
+    let rocket = "🚀"
+    let pSquare = "🟪"
+    let fName = "Billy"
+    let lName = "Bob"
+     ReactDOM.render(
+         //-- 1. The Element we want to create
+
+         <ul className="border w-50 mx-auto rounded shadow px-5 py-3">
+             <li>{bHeart}</li>
+             <li>{rocket}</li>
+             <li>{pSquare}</li>
+             <li>{fName.toUpperCase()}</li>
+             <li>{fName.length}</li>
+             <li>{lName}</li>
+             <li>{lName.length}</li>
+             <li>{fName} {lName}</li>
+             <li>{fName} {lName} is traveling a long dirt path, then suddly a stop. screeching the tires. </li>
+             <li>The length of the full name of {fName} {lName} is {fName.length + lName.length} characters</li>
+         </ul>,
+         //-- 2. Where we want to put it.
+         document.getElementById("sectionJsx")
+     );
+    /*
+     Note:
+If you're using Babel in production, you should normally not use @babel/standalone.
+Instead, you should use a build system running on Node.js, such as Webpack, Rollup,
+or Parcel, to transpile your JS ahead of time.
+    */
+
+
+
+
+</script>
+
+
+
 </html>

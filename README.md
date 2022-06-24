@@ -17,6 +17,8 @@
 
 
 ### Tools
+* Babeljs.io
+* Bootstrap
 
 
 
