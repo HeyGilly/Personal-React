@@ -93,6 +93,16 @@
         );
     }
 
+
+    // IMAGE SECTION
+    function ImageSection(event){
+        return(
+            <div className="my-5 d-flex justify-content-center">
+                <img className="p-0 m-0 my-5 rounded-5 shadow" src="images/abstractIMG.jpg" alt="Image Practice" />
+            </div>
+        );
+    }
+
     //Footer
     function Footer(event){
         return(
@@ -107,12 +117,14 @@
     // App
     function App() {
         return (
-            <div>
+            // this is fragments and wil allow you to use this instead of "div"
+            <>
                 <NavigationBar name="HeyGilly" />
                 <Header topic={"adding Components Properties"}/>
                 <ArraySection arraySkills={codingArrayofObjects} />
+                <ImageSection arraySkills={codingArrayofObjects} />
                 <Footer dateCurrentyear={new Date().getFullYear()}/>
-            </div>
+            </>
         );
     }
 
