@@ -44,6 +44,15 @@
         "Bootstrap"
     ]
 
+    //--  Important - so you can keep an id with the array items.
+    const codingArrayofObjects = codingSkillsList.map(
+        (skill, i)=>({
+        id:i,
+        title:skill
+    }));
+
+
+
     // Navigation Bar
     function NavigationBar(event){
         return(
@@ -74,12 +83,14 @@
             <div className="bg-dark  text-light rounded-5 w-50 mt-5 shadow mx-auto px-5">
                 <h3 className="ps-1 pt-4">The Array of Skills</h3>
                 <ul className="ps-5 pb-5">
-                    {codingSkillsList.map(skill=>(
-                        <li>{skill}</li>
+                    {event.arraySkills.map((skill) =>(
+                        <li key={skill.id}>
+                            {skill.title}
+                        </li>
                     ))}
                 </ul>
             </div>
-        )
+        );
     }
 
     //Footer
@@ -99,7 +110,7 @@
             <div>
                 <NavigationBar name="HeyGilly" />
                 <Header topic={"adding Components Properties"}/>
-                <ArraySection arraySkills={codingSkillsList} />
+                <ArraySection arraySkills={codingArrayofObjects} />
                 <Footer dateCurrentyear={new Date().getFullYear()}/>
             </div>
         );
