@@ -5,10 +5,22 @@ body{box-sizing:border-box;background-color: darkseagreen;}
 h1{
     background-color: ivory;
     font-size: 65px;
-    padding: 1em 10px 1.5em 10px;
+    padding: 1em 10px;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
     color: darkseagreen;
     text-shadow: -6px 6px 4px #1e1e1e;
     font-family: 'Sedgwick Ave Display', cursive;
+}
+.timeContainer{
+    font-size: 48px;
+    background-color: ivory;
+    width: fit-content;
+    padding: 1px 1em;
+    border-radius: 12px;
+    margin: 2em;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+    font-family: 'Sedgwick Ave Display', cursive;
+    text-shadow: -5px 5px 0 #1e1e1e;
+    color: darkseagreen;
 }

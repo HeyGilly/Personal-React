@@ -1,13 +1,14 @@
 import './App.css';
 
 // App Component
-function Playground_Component() {
+function Playground_Component({username, currentTime}) {
   return (
-    <div className="App">
-        <h1>
-          Welcome to the playground!
-        </h1>
-    </div>
+    <>
+        <h1>Welcome to the playground, {username}!</h1>
+        <div className="timeContainer">
+            <p>{currentTime}</p>
+        </div>
+    </>
   );
 }
 
