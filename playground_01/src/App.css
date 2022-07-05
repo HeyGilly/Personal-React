@@ -12,7 +12,7 @@ h1{
     text-shadow: -6px 6px 4px #1e1e1e;
     font-family: 'Sedgwick Ave Display', cursive;
 }
-.timeContainer{
+.timeContainer, .skillsContainer{
     font-size: 48px;
     background-color: ivory;
     width: fit-content;
@@ -23,4 +23,10 @@ h1{
     font-family: 'Sedgwick Ave Display', cursive;
     text-shadow: -5px 5px 0 #1e1e1e;
     color: darkseagreen;
+    display: inline-block;
+}
+.skillsContainer{
+    margin: 2em auto;
+    display: inline-block;
+
 }
