@@ -24,7 +24,7 @@ function Playground_Component({username, currentTime, hobbiesList, bookList}) {
             <h2>Hobbies are:</h2>
             <p>
             {hobbiesList.map(hobbies => (
-                <span>{hobbies}, </span>
+                <span key={hobbies.toString()}>{hobbies}, </span>
                     ))}
             </p>
         </div>
@@ -32,7 +32,7 @@ function Playground_Component({username, currentTime, hobbiesList, bookList}) {
             <h2>{username}'s top book</h2>
             {bookList.map(book => (
                 <section className={"bookContainer"}>
-                    <p>{book.title}<br />
+                    <p key={book.toString()}>{book.title}<br />
                         by {book.author}</p>
                 </section>
             ))}
