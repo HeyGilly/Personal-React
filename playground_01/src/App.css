@@ -12,7 +12,7 @@ h1{
     text-shadow: -6px 6px 4px #1e1e1e;
     font-family: 'Sedgwick Ave Display', cursive;
 }
-.timeContainer, .skillsContainer{
+.timeContainer, .skillsContainer, .hobbiesContainer, .bookContainer{
     font-size: 48px;
     background-color: ivory;
     width: fit-content;
@@ -28,5 +28,21 @@ h1{
 .skillsContainer{
     margin: 2em auto;
     display: inline-block;
-
+}
+h2 {
+   padding-top: .5em;
+    text-shadow: 0 0 0 white;
+    color: #1e1e1e;
+    text-align: center;
+}
+.hobbiesContainer{
+    font-size: 32px;
+    text-shadow: -2px 2px 0 #1e1e1e;
+}
+.bookContainer{
+    font-size: 20px;
+    text-shadow: 0 0 0 white;
+    color: #1e1e1e;
+    text-align: center;
+    padding: .5em 1em;
 }
