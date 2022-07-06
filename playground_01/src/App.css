@@ -12,7 +12,7 @@ h1{
     text-shadow: -6px 6px 4px #1e1e1e;
     font-family: 'Sedgwick Ave Display', cursive;
 }
-.timeContainer, .skillsContainer, .hobbiesContainer, .bookContainer{
+.timeContainer, .skillsContainer, .hobbiesContainer, .bookContainer, .numListContainer{
     font-size: 48px;
     background-color: ivory;
     width: fit-content;

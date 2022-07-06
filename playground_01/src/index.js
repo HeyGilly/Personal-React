@@ -26,8 +26,10 @@ const THeListOfBooksIEnjoy = [
     { title:"Of Mice and Men",author:"John Steinbeck"}
 ]
 
+const PracticeWithIds = [1,2,3,4,5,6,7,8,9];
+
 root.render(
   <React.StrictMode>
-    <Playground_Component username={RandomUser} currentTime={CurrentTime} hobbiesList={TheListOfHobbies} bookList={THeListOfBooksIEnjoy}/>
+    <Playground_Component username={RandomUser} currentTime={CurrentTime} hobbiesList={TheListOfHobbies} bookList={THeListOfBooksIEnjoy} numberList={PracticeWithIds} />
   </React.StrictMode>
 );

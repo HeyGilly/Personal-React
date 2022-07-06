@@ -6,7 +6,7 @@ function SetOfPersonalSkills({setSkills}){
 
 
 // App Component
-function Playground_Component({username, currentTime, hobbiesList, bookList}) {
+function Playground_Component({username, currentTime, hobbiesList, bookList, numberList}) {
   return (
     <>
         <h1>Welcome to the playground, {username}!</h1>
@@ -37,7 +37,14 @@ function Playground_Component({username, currentTime, hobbiesList, bookList}) {
                 </section>
             ))}
         </div>
-
+        <div className={"numListContainer"}>
+            <h2>Numbers with IDs</h2>
+            <p>
+                {numberList.map(num => (
+                    <span key={num.toString()}>{num} </span>
+                ))}
+            </p>
+        </div>
     </>
   );
 }
