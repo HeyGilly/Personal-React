@@ -7,7 +7,7 @@ import App from './App';
 // The Current time
 const current = new Date();
 const CurrentDate = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-const CurrentTimeRightNow = `${current.getHours()}:${current.getMinutes()}`
+const CurrentTimeRightNow = current.toLocaleTimeString('en', { hour: 'numeric', hour12: true, minute: 'numeric' });
 const CurrentHourTime = `${current.getHours()}`
 
 
