@@ -7,11 +7,13 @@ import App from './App';
 // The Current time
 const current = new Date();
 const CurrentDate = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-const CurrentHourRightNow = `${current.getHours()}`
+const CurrentTimeRightNow = `${current.getHours()}:${current.getMinutes()}`
+const CurrentHourTime = `${current.getHours()}`
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App currentDate={CurrentDate} currentHour={CurrentHourRightNow}/>
+    <App currentDate={CurrentDate} currentTime={CurrentTimeRightNow} currentHour={CurrentHourTime}/>
   </React.StrictMode>
 );
