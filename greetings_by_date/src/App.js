@@ -1,20 +1,27 @@
 import './App.css';
 
-function Morning({props}){
+function Morning({}){
     return(
         <>
             <img src={"img/goodMorning.png"} alt={"Good Morning World!"} className={"mx-auto"} height={'auto'} width={"820px"}/>
         </>
     );
 }
-function Evening({props}){
+function Afternoon({}){
+    return(
+        <>
+            <img src={"img/evening.png"} alt={"Good Afternoon World!"} className={"mx-auto"} height={'auto'} width={"820px"}/>
+        </>
+    );
+}
+function Evening({}){
     return(
         <>
             <img src={"img/goodNight.png"} alt={"Good Evening World!"} className={"mx-auto"} height={'auto'} width={"820px"}/>
         </>
     );
 }
-function LateNight({props}){
+function LateNight({}){
     return(
         <>
             <img src={"img/midnight.png"} alt={"Late Night!"} className={"mx-auto"} height={'auto'} width={"820px"}/>
@@ -22,8 +29,19 @@ function LateNight({props}){
     );
 }
 
+function IfStatementForTime({time}){
+    return(
+        <>
+            {time < 5 ? (<LateNight />)
+                : time < 12 ? (<Morning />)
+                    : time < 18 ? (<Afternoon />)
+                        : (<Evening />)}
+        </>
+    )
+}
 
-function App({currentDate, currentHour}) {
+
+function App({currentDate, currentTime, currentHour}) {
     return (
         <>
             <nav className="navbar bg-light">
@@ -32,12 +50,9 @@ function App({currentDate, currentHour}) {
                 </div>
             </nav>
             <main className={"vh-100 bg-dark pt-5"}>
-                <p className={"text-center text-dark rounded-5 w-25 mx-auto p-2 bg-warning"}>({currentDate})</p>
-                <p>{currentHour}</p>
+                <p className={"text-center text-dark rounded-5 w-25 mx-auto p-2 bg-warning"}>{currentDate}<br /><b>{currentTime}</b></p>
                 <section className={"d-flex flex-column justify-content-center "}>
-                    <Morning />
-                    <Evening />
-                    <LateNight />
+                    <IfStatementForTime time={currentHour}  />
                 </section>
 
             </main>
