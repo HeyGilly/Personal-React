@@ -1,2 +1,8 @@
 #Greetings From The Time
-This project is going to display a specific greeting that is going to be based on the time of day. 
+
+Created an app that changed images due to the time of day. 
+
+0-4 : LateNight
+5-11: Morning
+12-17: Afternoon
+18-23: Evening
