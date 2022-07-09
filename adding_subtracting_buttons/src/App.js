@@ -66,6 +66,9 @@ function App() {
           <section className={" col-12 col-md-3 h-25"}>
               <NegativeButton  />;
           </section>
+          <button type="button" className="btn btn-warning w-75 rounded-4 buttonText p-0 m-0" onClick={() => setCount(0)}>
+              0
+          </button>
       </div>
 
 

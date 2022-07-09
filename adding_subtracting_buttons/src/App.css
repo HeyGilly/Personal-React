@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;500;800&family=Righteous&display=swap');
 *{margin:0;padding:0;}
-body{box-sizing:border-box;}
+body{box-sizing:border-box;font-family: 'Raleway', sans-serif;}
 
 
 
 h1{font-family: 'Righteous', cursive;font-size:62px}
-.buttonText{font-size:62px;transition: all .4s ease-in-out}
-.buttonText:hover{transform: scale(1.1);box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;}
+.buttonText{font-size:73px;transition: all .4s ease-in-out;font-weight:300;}
+.buttonText:hover{transform: scale(1.1);font-weight:800;box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;}
