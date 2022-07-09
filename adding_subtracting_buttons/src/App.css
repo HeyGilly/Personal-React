@@ -1,2 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 *{margin:0;padding:0;}
 body{box-sizing:border-box;}
+
+
+
+h1{font-family: 'Righteous', cursive;font-size:62px}
+.buttonText{font-size:62px;transition: all .4s ease-in-out}
+.buttonText:hover{transform: scale(1.1);box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;}
