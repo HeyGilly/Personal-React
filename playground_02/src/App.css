@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Nosifer&display=swap');/*Must Need*/
 *{padding:0;margin:0;}
-body{box-sizing:border-box;font-size:24px;padding:0;margin:0;font-family: 'Bodoni Moda', serif;}
-
-
+body{box-sizing:border-box;font-size:24px;font-family: 'Bodoni Moda', serif; width:auto}
+#mainContainer{
+  overflow-x: scroll;
+  width: 4800px;
+}
 .SetContainer{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 440px;
-  border: 2px solid black;
+  border: 1px solid black;
+  margin: 20px ;
+  width: 560px;
 }
 .SkillsTopContainer{border-radius: 12px  }
 .listSection{border-radius: 0 0 12px 12px;}
