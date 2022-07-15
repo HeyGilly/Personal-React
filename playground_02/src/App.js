@@ -44,6 +44,8 @@ function MainSection({image, listOfSkills}){
     const [emotion, setEmotion] = useState("_______")
     const [hobbies, setHobbies] = useState("_______")
 
+    const [lights, setLights] = useState(true)
+
 // when you pass an empty array, it means that the effect will not be called after the first render
     // when you pass in a property, it will run after every change
     useEffect(()=>{
@@ -60,7 +62,7 @@ function MainSection({image, listOfSkills}){
                 <div className={"SetContainer"}>
                     <section className={"SkillsTopContainer shadow bg-dark text-light"}>
                         <h2 className={"mx-5 my-2"}><strong>Set of Skills:</strong></h2>
-                        <aside className={"listSection border bg-light text-dark ps-3"}>
+                        <aside className={" border bg-light text-dark ps-3"}>
                                 <ul>
                                     {listOfSkills.map(skill => (
                                         <li  key={skill.id}>
@@ -77,9 +79,9 @@ function MainSection({image, listOfSkills}){
                         <aside className={"listSection border bg-light text-dark ps-3"}>
                            <p className={"p-5 "}>Current Emotion is: {emotion}</p>
                             <section className={"d-flex justify-content-between m-3"}>
-                                <button type="button" class="btn btn-dark" onClick={()=> setEmotion("Excited")}>Excited</button>
-                                <button type="button" class="btn btn-dark" onClick={()=> setEmotion("Motivated")}>Motivated</button>
-                                <button type="button" class="btn btn-dark" onClick={()=> setEmotion("Ready")}>Ready</button>
+                                <button type="button" className="btn btn-dark" onClick={()=> setEmotion("Excited")}>Excited</button>
+                                <button type="button" className="btn btn-dark" onClick={()=> setEmotion("Motivated")}>Motivated</button>
+                                <button type="button" className="btn btn-dark" onClick={()=> setEmotion("Ready")}>Ready</button>
                             </section>
                         </aside>
                     </section>
@@ -90,24 +92,34 @@ function MainSection({image, listOfSkills}){
                         <aside className={"listSection border bg-light text-dark ps-3"}>
                             <p className={"p-5 "}>Favorite Hobby: {hobbies}</p>
                             <section className={"d-flex justify-content-between m-3"}>
-                                <button type="button" class="btn btn-dark" onClick={()=> setHobbies("Basketball")}>Basketball</button>
-                                <button type="button" class="btn btn-dark" onClick={()=> setHobbies("Hiking")}>Hiking</button>
-                                <button type="button" class="btn btn-dark" onClick={()=> setHobbies("Festivals")}>Festivals</button>
+                                <button type="button" className="btn btn-dark" onClick={()=> setHobbies("Basketball")}>Basketball</button>
+                                <button type="button" className="btn btn-dark" onClick={()=> setHobbies("Hiking")}>Hiking</button>
+                                <button type="button" className="btn btn-dark" onClick={()=> setHobbies("Festivals")}>Festivals</button>
                             </section>
                         </aside>
                     </section>
                 </div>
-
-
-
-
-
-
+                <div className={"SetContainer"}>
+                    <section className={"SkillsTopContainer shadow bg-dark text-light"}>
+                        <h2 className={"mx-5 text-center my-2"}><strong>Today's Feeling:</strong></h2>
+                        <aside className={"listSection border bg-light text-dark ps-3 text-center py-4"}>
+                            <input type={"checkbox"} value={lights} onChange={()=> setLights((lights) => !lights)} />
+                            <label>{lights ? "Lights are off!" : <Wow /> }</label>
+                        </aside>
+                    </section>
+                </div>
             </div>
         </>
     )
 }
-
+function Wow(){
+    return(
+        <>
+        <p>Lights are On! </p>
+        <img src={"images/lightOn.png"} alt={"lights on"}/>
+        </>
+        )
+}
 
 //--- App
 function App() {
