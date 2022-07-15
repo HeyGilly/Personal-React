@@ -1,5 +1,5 @@
 import './App.css';
-import {useState, useEffect} from "react";
+import {useState, useEffect, useReducer} from "react";
 
 //--- Header
 function Navigation(){
@@ -45,6 +45,7 @@ function MainSection({image, listOfSkills}){
     const [hobbies, setHobbies] = useState("_______")
 
     const [lights, setLights] = useState(true)
+    const [catdog, setCatDog] = useReducer(yourResults => ! yourResults, 'none')
 
 // when you pass an empty array, it means that the effect will not be called after the first render
     // when you pass in a property, it will run after every change
@@ -101,10 +102,19 @@ function MainSection({image, listOfSkills}){
                 </div>
                 <div className={"SetContainer"}>
                     <section className={"SkillsTopContainer shadow bg-dark text-light"}>
-                        <h2 className={"mx-5 text-center my-2"}><strong>Today's Feeling:</strong></h2>
+                        <h2 className={"mx-5 text-center my-2"}><strong>Lights are on/off</strong></h2>
                         <aside className={"listSection border bg-light text-dark ps-3 text-center py-4"}>
                             <input type={"checkbox"} value={lights} onChange={()=> setLights((lights) => !lights)} />
                             <label>{lights ? "Lights are off!" : <Wow /> }</label>
+                        </aside>
+                    </section>
+                </div>
+                <div className={"SetContainer"}>
+                    <section className={"SkillsTopContainer shadow bg-dark text-light"}>
+                        <h2 className={"mx-5 text-center my-2"}><strong>Are you a Dog/Cat Person?</strong></h2>
+                        <aside className={"listSection border bg-light text-dark ps-3 text-center py-4"}>
+                            <input className="form-check-input" value={catdog}  onChange={setCatDog} type="checkbox" id="flexSwitchCheckChecked" />
+                            <label>{catdog ? <Cat /> : <Dog /> }</label>
                         </aside>
                     </section>
                 </div>
@@ -119,6 +129,22 @@ function Wow(){
         <img src={"images/lightOn.png"} alt={"lights on"}/>
         </>
         )
+}
+function Cat(){
+    return(
+        <>
+            <p>You're a CAT person</p>
+            <img src={"images/cat.jpg"} alt={"Cat"}/>
+        </>
+    )
+}
+function Dog(){
+    return(
+        <>
+            <p>You're a DOG person</p>
+            <img src={"images/dog.jpg"} alt={"Dog"}/>
+        </>
+    )
 }
 
 //--- App
