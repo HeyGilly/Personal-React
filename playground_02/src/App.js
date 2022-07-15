@@ -1,4 +1,5 @@
 import './App.css';
+import {useState} from "react";
 
 //--- Header
 function Navigation(){
@@ -27,22 +28,29 @@ function Footer({year}){
     )
 }
 
+//Global Variable
 const listOfSkills = [
     "React", "Javascript", "JQuery", "Boostrap", "Java", "spring"
 ]
 
+// Established an id for this array.
 const SkillObject = listOfSkills.map((skill, i) => ({
     id:i,
     name:skill
 }))
 
 function MainSection({image, listOfSkills}){
+
+    const [emotion, setEmotion] = useState("Stoked")
+
     return (
         <>
             <main className={"vh-100 d-flex align-items-center position-relative"}>
-                <img src={image} className={"rounded shadow ms-5"} alt={"HeyGilly"}/>
+                <div className={"SetContainer"}>
+                    <img src={image} className={"rounded shadow ms-5"} alt={"HeyGilly"}/>
+                </div>
                 {/*Skills Set*/}
-                <div className={"SkillSetContainer"}>
+                <div className={"SetContainer"}>
                     <section className={"SkillsTopContainer shadow bg-dark text-light"}>
                         <h2 className={"mx-5 my-2"}><strong>Set of Skills:</strong></h2>
                         <aside className={"listSection border bg-light text-dark ps-3"}>
@@ -53,6 +61,19 @@ function MainSection({image, listOfSkills}){
                                         </li>
                                     ))}
                                 </ul>
+                        </aside>
+                    </section>
+                </div>
+                <div className={"SetContainer"}>
+                    <section className={"SkillsTopContainer shadow bg-dark text-light"}>
+                        <h2 className={"mx-5 text-center my-2"}><strong>Today's Feeling:</strong></h2>
+                        <aside className={"listSection border bg-light text-dark ps-3"}>
+                           <p className={"p-5 "}>Current Emotion is: {emotion}</p>
+                            <section className={"d-flex justify-content-between "}>
+                                <button onClick={()=> setEmotion("Excited")}>Excited</button>
+                                <button onClick={()=> setEmotion("Motivated")}>Motivated</button>
+                                <button onClick={()=> setEmotion("Ready")}>Ready</button>
+                            </section>
                         </aside>
                     </section>
                 </div>
