@@ -39,6 +39,31 @@ const SkillObject = listOfSkills.map((skill, i) => ({
     name:skill
 }))
 
+function Wow(){
+    return(
+        <>
+            <p>Lights are On! </p>
+            <img src={"images/lightOn.png"} alt={"lights on"}/>
+        </>
+    )
+}
+function Cat(){
+    return(
+        <>
+            <p>You're a CAT person</p>
+            <img src={"images/cat.jpg"} alt={"Cat"}/>
+        </>
+    )
+}
+function Dog(){
+    return(
+        <>
+            <p>You're a DOG person</p>
+            <img src={"images/dog.jpg"} alt={"Dog"}/>
+        </>
+    )
+}
+
 function MainSection({image, listOfSkills}){
 
     const [emotion, setEmotion] = useState("_______")
@@ -53,9 +78,14 @@ function MainSection({image, listOfSkills}){
         console.log(`It's ${emotion} right now`)
     },[emotion]) // Dependency array
 
+    const submit = (e) => {
+        e.preventDefault();
+    }
+
+
     return (
         <>
-            <div id={"mainContainer"} className={"vh-100 d-flex"}>
+            <main id={"mainContainer"} className={"vh-100 d-flex"}>
                 <div className={"SetContainer"}>
                     <img src={image} className={"rounded shadow ms-5"} alt={"HeyGilly"}/>
                 </div>
@@ -118,34 +148,23 @@ function MainSection({image, listOfSkills}){
                         </aside>
                     </section>
                 </div>
-            </div>
+                <div className={"SetContainer"}>
+                    <section className={"SkillsTopContainer shadow bg-dark text-light"}>
+                        <h2 className={"mx-5 text-center my-2"}><strong>Form Filling:</strong></h2>
+                        <aside className={"listSection border bg-light text-dark ps-3"}>
+                           <form onSubmit={submit}>
+                               <input type={"text"} placeholder={"Name of color:"} />
+                               <input type={"color"} placeholder={"#1e1e1e"}/>
+                               <button>Adding Color</button>
+                           </form>
+                        </aside>
+                    </section>
+                </div>
+            </main>
         </>
     )
 }
-function Wow(){
-    return(
-        <>
-        <p>Lights are On! </p>
-        <img src={"images/lightOn.png"} alt={"lights on"}/>
-        </>
-        )
-}
-function Cat(){
-    return(
-        <>
-            <p>You're a CAT person</p>
-            <img src={"images/cat.jpg"} alt={"Cat"}/>
-        </>
-    )
-}
-function Dog(){
-    return(
-        <>
-            <p>You're a DOG person</p>
-            <img src={"images/dog.jpg"} alt={"Dog"}/>
-        </>
-    )
-}
+
 
 //--- App
 function App() {
