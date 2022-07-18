@@ -193,17 +193,6 @@ function MainSection({image, listOfSkills}){
                         </aside>
                     </section>
                 </div>
-                {/*Form Number 3*/}
-                <div className={"SetContainer"}>
-                    <section className={"SkillsTopContainer shadow bg-dark text-light"}>
-                        <h2 className={"mx-5 text-center my-2"}><strong>Form Filling pt3:</strong></h2>
-                        <aside className={"listSection border bg-light text-dark ps-3"}>
-                            <form  className={"border p-3 m-3"}>
-
-                            </form>
-                        </aside>
-                    </section>
-                </div>
             </main>
         </>
     )
