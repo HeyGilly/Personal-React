@@ -28,19 +28,41 @@ function Footer({year}){
     )
 }
 
+function displaySearch(e){
+    if(e.keyCode === 13){
+        alert("you git enter")
+    }
+}
+
+
 function App() {
 
     const [inputValue, setInputValue] = useState("");
+
+    const submit = (e) =>{
+        e.preventDefault();         // This prevents the page from refreshing
+        alert(`${inputValue}`)
+        setInputValue(" ");
+    }
 
   return (
     <>
         <Navigation />
             <main>
                 <section className={"d-flex align-items-center border justify-content-center formContainer"}>
-                    <form className={"bg-dark p-3 rounded-3"}>
-                        <input value={inputValue} onChange={(event => setInputValue(event.target.value))} type={"text"} placeholder={"Place your Input here"}
+                    <form className={"bg-dark p-3 rounded-3"} onSubmit={submit}>
+                        <input
+                            value={inputValue}
+                            onChange={(event => setInputValue(event.target.value))}
+                            type={"text"}
+                            placeholder={"Place your Input here"}
+                            className={""}
                         />
+                        <button type="submit" className="btn btn-light mb-2 ms-2">Submit</button>
                     </form>
+                </section>
+                <section>
+
                 </section>
             </main>
         <Footer />
