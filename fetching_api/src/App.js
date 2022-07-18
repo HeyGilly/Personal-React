@@ -1,4 +1,5 @@
 import './App.css';
+import {useState} from "react";
 
 //--- Header
 function Navigation(){
@@ -28,9 +29,20 @@ function Footer({year}){
 }
 
 function App() {
+
+    const [inputValue, setInputValue] = useState("");
+
   return (
     <>
         <Navigation />
+            <main>
+                <section className={"d-flex align-items-center border justify-content-center formContainer"}>
+                    <form className={"bg-dark p-3 rounded-3"}>
+                        <input value={inputValue} onChange={(event => setInputValue(event.target.value))} type={"text"} placeholder={"Place your Input here"}
+                        />
+                    </form>
+                </section>
+            </main>
         <Footer />
     </>
   );

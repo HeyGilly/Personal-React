@@ -15,3 +15,8 @@ body{box-sizing:border-box;font-size:24px;font-family: 'Bodoni Moda', serif; wid
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
 }
+
+
+.formContainer{
+  height: 520px;
+}
