@@ -1,5 +1,5 @@
 import './App.css';
-import {useState, useEffect, useReducer} from "react";
+import {useState, useEffect, useReducer, useRef} from "react";
 
 //--- Header
 function Navigation(){
@@ -78,8 +78,26 @@ function MainSection({image, listOfSkills}){
         console.log(`It's ${emotion} right now`)
     },[emotion]) // Dependency array
 
+
+    const txtInput = useRef();
+    const hexColor = useRef();
+
     const submit = (e) => {
         e.preventDefault();
+        const name = txtInput.current.value;
+        const color = hexColor.current.value;
+        alert(`${name}, ${color}`)
+        txtInput.current.value = "";
+        hexColor.current.value = "";
+    }
+
+    const [colorTitle, setcolorTitle] = useState("");
+    const [hexColor2, sethexColor2] = useState("#1e1e1e")
+    const submit2 = (e) => {
+        e.preventDefault();
+        alert(`${colorTitle}, ${hexColor2}`)
+        setcolorTitle("");
+        sethexColor2("#1e1e1e ")
     }
 
 
@@ -139,6 +157,7 @@ function MainSection({image, listOfSkills}){
                         </aside>
                     </section>
                 </div>
+                {/*Toggle Between Cats and Dogs*/}
                 <div className={"SetContainer"}>
                     <section className={"SkillsTopContainer shadow bg-dark text-light"}>
                         <h2 className={"mx-5 text-center my-2"}><strong>Are you a Dog/Cat Person?</strong></h2>
@@ -148,15 +167,40 @@ function MainSection({image, listOfSkills}){
                         </aside>
                     </section>
                 </div>
+                {/*Form Number 1*/}
                 <div className={"SetContainer"}>
                     <section className={"SkillsTopContainer shadow bg-dark text-light"}>
                         <h2 className={"mx-5 text-center my-2"}><strong>Form Filling:</strong></h2>
                         <aside className={"listSection border bg-light text-dark ps-3"}>
-                           <form onSubmit={submit}>
-                               <input type={"text"} placeholder={"Name of color:"} />
-                               <input type={"color"} placeholder={"#1e1e1e"}/>
-                               <button>Adding Color</button>
+                           <form onSubmit={submit} className={"border p-3 m-3"}>
+                               <input type={"text"} placeholder={"Name of color:"} ref={txtInput}/><br />
+                               <input type={"color"} placeholder={"#1e1e1e"} ref={hexColor}/><br />
+                               <button type="submit" className="btn btn-dark">Submit</button>
                            </form>
+                        </aside>
+                    </section>
+                </div>
+                {/*Form Number 2*/}
+                <div className={"SetContainer"}>
+                    <section className={"SkillsTopContainer shadow bg-dark text-light"}>
+                        <h2 className={"mx-5 text-center my-2"}><strong>Form Filling pt2:</strong></h2>
+                        <aside className={"listSection border bg-light text-dark ps-3"}>
+                            <form onSubmit={submit2} className={"border p-3 m-3"}>
+                                <input type={"text"} placeholder={"Name of color:"} value={colorTitle} onChange={(e) => setcolorTitle(e.target.value)}/><br />
+                                <input type={"color"} placeholder={"#1e1e1e"} value={hexColor2} onChange={(event) => sethexColor2(event.target.value)}/><br />
+                                <button type="submit" className="btn btn-dark">Submit</button>
+                            </form>
+                        </aside>
+                    </section>
+                </div>
+                {/*Form Number 3*/}
+                <div className={"SetContainer"}>
+                    <section className={"SkillsTopContainer shadow bg-dark text-light"}>
+                        <h2 className={"mx-5 text-center my-2"}><strong>Form Filling pt3:</strong></h2>
+                        <aside className={"listSection border bg-light text-dark ps-3"}>
+                            <form  className={"border p-3 m-3"}>
+
+                            </form>
                         </aside>
                     </section>
                 </div>
