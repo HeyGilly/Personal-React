@@ -1,0 +1,17 @@
+/*---- Mandatory ----*/
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Nosifer&display=swap');/*Must Need*/
+*{padding:0;margin:0;}
+body{box-sizing:border-box;font-size:24px;font-family: 'Bodoni Moda', serif; width:auto}
+
+/*---- Navigation ----*/
+/*Navigation Logo*/
+.App-logo{height: 90px;}
+/*Animation Spin*/
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {animation: App-logo-spin infinite 25s linear;}
+}
+/*Creation of Animation Spin*/
+@keyframes App-logo-spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
