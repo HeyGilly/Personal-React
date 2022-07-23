@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 //--- Header
 function Navigation(){
@@ -28,29 +28,33 @@ function Footer({year}){
     )
 }
 
-function displaySearch(e){
-    if(e.keyCode === 13){
-        alert("you git enter")
-    }
-}
-
 
 function App() {
 
     const [inputValue, setInputValue] = useState("");
+    const [data, setData] = useState(null);
 
-    const submit = (e) =>{
-        e.preventDefault();         // This prevents the page from refreshing
-        alert(`${inputValue}`)
-        setInputValue(" ");
+
+    const fetchData = () => {
+        fetch(`https://bobsburgers-api.herokuapp.com/characters/${inputValue}`)
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                setData(data)
+            })
     }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
 
   return (
     <>
         <Navigation />
             <main>
                 <section className={"d-flex align-items-center border justify-content-center formContainer"}>
-                    <form className={"bg-dark p-3 rounded-3"} onSubmit={submit}>
+                    <form className={"bg-dark p-3 rounded-3"} onSubmit={fetchData}>
                         <input
                             value={inputValue}
                             onChange={(event => setInputValue(event.target.value))}
@@ -62,7 +66,13 @@ function App() {
                     </form>
                 </section>
                 <section>
-
+                    {data.length > 0 && (
+                        <ul>
+                            {data.map(user => (
+                                <li key={user.id}>{user.name}</li>
+                            ))}
+                        </ul>
+                    )}
                 </section>
             </main>
         <Footer />
